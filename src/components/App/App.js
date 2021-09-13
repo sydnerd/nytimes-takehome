@@ -1,6 +1,8 @@
 import './App.css';
 import { getArticles } from '../../apiCalls'
 import React, {useEffect, useState} from 'react';
+import { Route, Switch, Redirect} from 'react-router-dom';
+import ArticleList from '../ArticleList/ArticleList'
 
 const App = () => {
   const [articles, setArticles] = useState([])
@@ -19,9 +21,16 @@ const App = () => {
   },[])
 
   return (
-    <header>
-      NY TIMES APP
-    </header>
+    <main>
+      <header>
+        NY TIMES APP
+      </header>
+      <Switch>
+        <Route exact path ='/'>
+          <ArticleList articles = {articles}/>
+        </Route>
+      </Switch>
+    </main>  
   )
 }
 
