@@ -8,6 +8,7 @@ const ArticleCard = ({title, image, section}) => {
         <p className='article-section'>Section: {section}</p>
       </div>
       <img className='article-image' src={image.url}/>
+      <button className='info-button'>Click for more info</button>
     </section>
   )
 }

@@ -19,3 +19,20 @@
 .article-title {
   width: 50vh;
 }
+
+.article-image {
+  margin: 1.5vh;;
+}
+
+.info-button {
+  border: none;
+  border-radius: 5px;
+  height: 5vh;
+  margin-bottom: 1.5vh;
+  margin-left: 50vh;
+}
+
+.info-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
