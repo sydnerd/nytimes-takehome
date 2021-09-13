@@ -8,6 +8,7 @@ const ArticleList = ({articles}) => {
         key={article.title}
         title={article.title}
         image={article.multimedia[0]}
+        section={article.section}
       />
     )
   })

@@ -1,10 +1,13 @@
 import './ArticleCard.css'
 
-const ArticleCard = ({title, image}) => {
+const ArticleCard = ({title, image, section}) => {
   return (
-    <section>
-      <img src={image.url}/>
-      <h1>{title}</h1>
+    <section className='article-card'>
+      <div className='article-header'>
+        <h1 className='article-title'>{title}</h1>
+        <p className='article-section'>Section: {section}</p>
+      </div>
+      <img className='article-image' src={image.url}/>
     </section>
   )
 }
