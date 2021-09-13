@@ -23,7 +23,7 @@ const App = () => {
   return (
     <main>
       <header>
-        NY TIMES APP
+        
       </header>
       <Switch>
         <Route exact path ='/'>

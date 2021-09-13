@@ -14,6 +14,7 @@ const ArticleList = ({articles}) => {
   })
   return (
     <section>
+      <h1>News</h1>
       {articleTitles}
     </section>
   )
