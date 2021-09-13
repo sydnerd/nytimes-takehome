@@ -1,0 +1,42 @@
+.article-card {
+  border: solid 1px black;
+  width: 100vh;
+  margin-bottom: 5vh;
+}
+
+.article-image {
+  height: 30vh;
+  width: 30vh;
+  max-width: 100%;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5vh;
+}
+
+.article-title {
+  width: 50vh;
+}
+
+.article-image {
+  margin: 1.5vh;;
+}
+
+.info-button {
+  border: none;
+  border-radius: 5px;
+  height: 5vh;
+  margin-bottom: 1.5vh;
+  margin-left: 50vh;
+}
+
+.info-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.article-section {
+  font-weight: bolder;
+  color: darkblue;
+}
