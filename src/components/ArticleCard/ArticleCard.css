@@ -15,12 +15,13 @@
 
 .article-header {
   display: flex;
-  justify-content: space-between;
-  margin: 1.5vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .article-title {
   word-wrap: break-word;
+  margin: 2vh;
 }
 
 .article-image {
@@ -42,6 +43,7 @@
 .article-section {
   font-weight: bolder;
   color: darkblue;
+  margin: 0;
 }
 
 .photo-container {
