@@ -13,8 +13,7 @@ const ArticleList = ({articles}) => {
     )
   })
   return (
-    <section>
-      <h1>News</h1>
+    <section className='article-list-section'>
       {articleTitles}
     </section>
   )

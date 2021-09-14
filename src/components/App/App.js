@@ -1,7 +1,7 @@
 import './App.css';
 import { getArticles } from '../../apiCalls'
 import React, {useEffect, useState} from 'react';
-import { Route, Switch, Redirect} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
 
 const App = () => {
