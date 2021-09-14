@@ -1,8 +1,9 @@
 import './App.css';
-import { getArticles } from '../../apiCalls'
+import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
+import Nav from '../../components/Nav/Nav'
 
 const App = () => {
   const [articles, setArticles] = useState([])
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <main>
       <header>
-        <h1>News</h1> 
+        <Nav />
       </header>
       <Switch>
         <Route exact path ='/'>
