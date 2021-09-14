@@ -6,11 +6,12 @@ import ArticleList from '../ArticleList/ArticleList'
 
 const App = () => {
   const [articles, setArticles] = useState([])
+  const [sectionType, setSectionType] = useState('home')
   const [error, setError] = useState('')
 
   useEffect(()=> {
     let mounted = true
-    getArticles()
+    getArticles(sectionType)
       .then(data =>{
         if(mounted) {
           setArticles(data.results)
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <main>
       <header>
-        
+        <h1>News</h1> 
       </header>
       <Switch>
         <Route exact path ='/'>
