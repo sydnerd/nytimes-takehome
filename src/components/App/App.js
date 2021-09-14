@@ -20,12 +20,16 @@ const App = () => {
       })
         .catch(() => setError("We're experiencing server technical difficulties, please check back again later!"));
       return () => mounted = false;
-  },[])
+  },[sectionType])
+
+  const updateSection = (section) => {
+    setSectionType(section)
+  }
 
   return (
     <main>
       <header>
-        <Nav />
+        <Nav updateSection={updateSection}/>
       </header>
       <Switch>
         <Route exact path ='/'>
