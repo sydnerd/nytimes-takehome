@@ -7,9 +7,10 @@ const Nav = () => {
 const options = sectionTypes.map(section => ({label: section, value: section}))  
   console.log(sectionTypes)
   return (
-    <nav className='nav-bar'>
-      <h1>News</h1>
+    <nav>
+      <h1 className='title'>News</h1>
       <Select
+      className='drop-down'
       options={options}
       />
     </nav>
