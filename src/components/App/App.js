@@ -1,16 +1,18 @@
 import './App.css';
-import { getArticles } from '../../apiCalls'
+import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
-import { Route, Switch, Redirect} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
+import Nav from '../../components/Nav/Nav'
 
 const App = () => {
   const [articles, setArticles] = useState([])
+  const [sectionType, setSectionType] = useState('home')
   const [error, setError] = useState('')
 
   useEffect(()=> {
     let mounted = true
-    getArticles()
+    getArticles(sectionType)
       .then(data =>{
         if(mounted) {
           setArticles(data.results)
@@ -18,12 +20,16 @@ const App = () => {
       })
         .catch(() => setError("We're experiencing server technical difficulties, please check back again later!"));
       return () => mounted = false;
-  },[])
+  },[sectionType])
+
+  const updateSection = (section) => {
+    setSectionType(section)
+  }
 
   return (
     <main>
       <header>
-        
+        <Nav updateSection={updateSection}/>
       </header>
       <Switch>
         <Route exact path ='/'>

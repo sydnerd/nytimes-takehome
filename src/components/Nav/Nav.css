@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: black;
+  color: white;
+}
+
+.title {
+  font-size: 8vh;
+}
+
+.drop-down {
+  width: 30vh;
+  margin-bottom: 2vh;
+  color: black;
+}

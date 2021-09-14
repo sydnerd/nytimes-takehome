@@ -5,7 +5,7 @@ const ArticleList = ({articles}) => {
   const articleTitles = articles.map(article => {
     return (
       <ArticleCard 
-        key={article.title}
+        key={article.id}
         title={article.title}
         image={article.multimedia[0]}
         section={article.section}
@@ -13,8 +13,7 @@ const ArticleList = ({articles}) => {
     )
   })
   return (
-    <section>
-      <h1>News</h1>
+    <section className='article-list-section'>
       {articleTitles}
     </section>
   )

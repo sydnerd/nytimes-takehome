@@ -1,7 +1,10 @@
 .article-card {
-  border: solid 1px black;
-  width: 100vh;
-  margin-bottom: 5vh;
+  border: solid 3px black;
+  width: 65vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin:5vh;
 }
 
 .article-image {
@@ -12,12 +15,13 @@
 
 .article-header {
   display: flex;
-  justify-content: space-between;
-  margin: 1.5vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .article-title {
-  width: 50vh;
+  word-wrap: break-word;
+  margin: 2vh;
 }
 
 .article-image {
@@ -28,8 +32,8 @@
   border: none;
   border-radius: 5px;
   height: 5vh;
+  width: 25vh;
   margin-bottom: 1.5vh;
-  margin-left: 50vh;
 }
 
 .info-button:hover {
@@ -39,4 +43,11 @@
 .article-section {
   font-weight: bolder;
   color: darkblue;
+  margin: 0;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
