@@ -3,7 +3,8 @@ import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
-import Nav from '../../components/Nav/Nav'
+import Nav from '../../components/Nav/Nav';
+import Details from '../../components/Details/Details'
 
 const App = () => {
   const [articles, setArticles] = useState([])
@@ -17,7 +18,7 @@ const App = () => {
         if(mounted) {
           let articlesWId = data.results.map((article, i) => {
             let id = i
-            return { ...article, num: `${id}`}
+            return { ...article, id: `${id}`}
           })
           console.log('fetched articles', articlesWId)
           setArticles(articlesWId)
@@ -40,6 +41,18 @@ const App = () => {
         <Route exact path ='/'>
           <ArticleList articles = {articles}/>
         </Route>
+        <Route exact path ='/:id'
+         
+          render={({ match }) => {
+            console.log('match', match)
+            let foundArticle = articles.find(article => article.id === match.params.id)
+            console.log(match.params.id, 'id')
+            if (!foundArticle) {
+              return <h2>No information found.</h2>
+            }
+            return <Details foundArticle={ foundArticle }/>
+          }}
+        />
       </Switch>
     </main>  
   )

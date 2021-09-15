@@ -1,8 +1,8 @@
 import './ArticleCard.css'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
-const ArticleCard = ({title, image, section }) => {
-  // const [article, setArticle] = useState('')
+const ArticleCard = ({title, image, section, id }) => {
   return (
     <section className='article-card'>
       <div className='article-header'>
@@ -11,7 +11,12 @@ const ArticleCard = ({title, image, section }) => {
       </div>
       <div className='photo-container'>
         <img className='article-image' alt='image' src={image.url}/>
-        <button className='info-button'>Click for more info</button>
+        <Link
+          to={`/${id}`}
+        >
+          <button className='info-button'>Click for more info</button>
+        </Link>
+        
       </div>
     </section>
   )

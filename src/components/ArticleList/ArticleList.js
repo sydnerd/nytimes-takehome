@@ -6,9 +6,11 @@ const ArticleList = ({articles}) => {
     return (
       <ArticleCard 
         key={article.title}
+        id={article.id}
         title={article.title}
         image={article.multimedia[0]}
         section={article.section}
+        article = {article}
       />
     )
   })
