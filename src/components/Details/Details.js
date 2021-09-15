@@ -7,6 +7,7 @@ const Details = ({ foundArticle, media }) => {
       <h2>{foundArticle.title}</h2>
       <p>{foundArticle.byline}</p>
       <p><em>{foundArticle.abstract}</em></p>
+      <button className='read-more-btn' href={foundArticle.url}>Read more!</button>
     </section>
   )
 }

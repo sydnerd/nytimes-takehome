@@ -8,3 +8,21 @@
 .detail-img {
   height:50vh;
 }
+
+.read-more-btn {
+  border: none;
+  border-radius: 5px;
+  height: 5vh;
+  width: 25vh;
+  margin-bottom: 2vh;
+  background-color: black;
+  color: white;
+  margin-top: 2vh;
+}
+
+.read-more-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: red;
+  color: white;
+}

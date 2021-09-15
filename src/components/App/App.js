@@ -20,7 +20,6 @@ const App = () => {
             let id = i
             return { ...article, id: `${id}`}
           })
-          console.log('fetched articles', articlesWId)
           setArticles(articlesWId)
         }
       })
@@ -32,6 +31,8 @@ const App = () => {
     setSectionType(section)
   }
 
+  const noArticles = !articles.length && <h2>There are no articles in this section! :(</h2>
+
   return (
     <main>
       <header>
@@ -39,6 +40,7 @@ const App = () => {
       </header>
       <Switch>
         <Route exact path ='/'>
+          {noArticles}
           <ArticleList articles = {articles}/>
         </Route>
         <Route exact path ='/:id'
