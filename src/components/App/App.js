@@ -12,13 +12,18 @@ const App = () => {
 
   useEffect(()=> {
     let mounted = true
-    getArticles(sectionType)
+      getArticles(sectionType)
       .then(data =>{
         if(mounted) {
-          setArticles(data.results)
+          let articlesWId = data.results.map((article, i) => {
+            let id = i
+            return { ...article, num: `${id}`}
+          })
+          console.log('fetched articles', articlesWId)
+          setArticles(articlesWId)
         }
       })
-        .catch(() => setError("We're experiencing server technical difficulties, please check back again later!"));
+      .catch(() => setError("We're experiencing server technical difficulties, please check back again later!"));
       return () => mounted = false;
   },[sectionType])
 

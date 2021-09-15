@@ -1,9 +1,8 @@
 import './ArticleCard.css'
 import React, { useState } from 'react';
 
-const ArticleCard = ({title, image, section, key}) => {
-  const [article, setArticle] = useState('')
-
+const ArticleCard = ({title, image, section }) => {
+  // const [article, setArticle] = useState('')
   return (
     <section className='article-card'>
       <div className='article-header'>
