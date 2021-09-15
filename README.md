@@ -1,8 +1,5 @@
 ## Project Overview
 
-<img width="1325" alt="Screen Shot 2021-08-30 at 8 02 12 AM" src="https://user-images.githubusercontent.com/78241098/131351569-86b92dd8-6fce-4082-8aad-4802b3d9d82b.png">
-
-
 This application is the result of a practice take home challenge for Turing Mod4.
 
 ## Contributor
