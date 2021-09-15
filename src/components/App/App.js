@@ -50,7 +50,7 @@ const App = () => {
             if (!foundArticle) {
               return <h2>No information found.</h2>
             }
-            return <Details foundArticle={ foundArticle }/>
+            return <Details foundArticle={ foundArticle } media = {foundArticle.multimedia}/>
           }}
         />
       </Switch>
