@@ -42,7 +42,6 @@ const App = () => {
           <ArticleList articles = {articles}/>
         </Route>
         <Route exact path ='/:id'
-         
           render={({ match }) => {
             console.log('match', match)
             let foundArticle = articles.find(article => article.id === match.params.id)

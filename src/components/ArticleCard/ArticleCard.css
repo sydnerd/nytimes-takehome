@@ -1,10 +1,12 @@
 .article-card {
-  border: solid 3px black;
+  /* border: solid 1px black; */
   width: 65vh;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin:5vh;
+  color: white;
+  background-color: black;
 }
 
 .article-image {
@@ -33,16 +35,20 @@
   border-radius: 5px;
   height: 5vh;
   width: 25vh;
-  margin-bottom: 1.5vh;
+  margin-bottom: 2vh;
+  background-color: white;
+  margin-top: 2vh;
 }
 
 .info-button:hover {
   cursor: pointer;
   transform: scale(1.1);
+  background-color: red;
+  color: white;
 }
 .article-section {
   font-weight: bolder;
-  color: darkblue;
+  color: red;
   margin: 0;
 }
 

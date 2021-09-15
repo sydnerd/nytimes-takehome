@@ -9,14 +9,13 @@ const options = sectionTypes.map(section => ({label: section, value: section}))
 
   return (
     <nav>
-      <Link to ='/'><button>home</button> </Link>
+      <Link to ='/'><button className='home-btn'>home</button> </Link>
         <h1 className='title'>News</h1>
         <Select
         className='drop-down'
         options={options}
         onChange={(event) => updateSection(event.value)}
         />
-        
     </nav>
   )
 }
