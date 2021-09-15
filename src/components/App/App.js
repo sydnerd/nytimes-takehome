@@ -42,7 +42,6 @@ const App = () => {
           <ArticleList articles = {articles}/>
         </Route>
         <Route exact path ='/:id'
-         
           render={({ match }) => {
             console.log('match', match)
             let foundArticle = articles.find(article => article.id === match.params.id)
@@ -50,7 +49,7 @@ const App = () => {
             if (!foundArticle) {
               return <h2>No information found.</h2>
             }
-            return <Details foundArticle={ foundArticle }/>
+            return <Details foundArticle={ foundArticle } media = {foundArticle.multimedia}/>
           }}
         />
       </Switch>
