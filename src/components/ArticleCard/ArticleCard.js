@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const ArticleCard = ({title, image, section, id }) => {
+  console.log('image', image)
   return (
     <section className='article-card'>
       <div className='article-header'>
@@ -10,13 +11,12 @@ const ArticleCard = ({title, image, section, id }) => {
         <p className='article-section'><em>{section}</em></p>
       </div>
       <div className='photo-container'>
-        <img className='article-image' alt='image' src={image.url}/>
+      {image && <img className='article-image' alt={title} src={image[0].url}/>}
         <Link
           to={`/${id}`}
         >
           <button className='info-button'>Click for more info</button>
         </Link>
-        
       </div>
     </section>
   )
