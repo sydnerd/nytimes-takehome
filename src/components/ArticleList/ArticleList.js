@@ -18,7 +18,7 @@ const ArticleList = ({articles, updateSection}) => {
   return (
     <main>
       <nav>
-        <h1>News</h1>
+        <h1 className='title'>News</h1>
         <Search updateSection={updateSection}/>
       </nav>
     <section className='article-list-section'>

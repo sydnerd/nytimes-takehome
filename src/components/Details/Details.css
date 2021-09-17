@@ -14,8 +14,8 @@
   border-radius: 5px;
   height: 5vh;
   margin-bottom: 2vh;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   margin-top: 2vh;
   padding: 1vh;
   text-decoration: none;
@@ -25,5 +25,26 @@
   cursor: pointer;
   transform: scale(1.1);
   background-color: red;
+  color: white;
+}
+
+.home-btn {
+  margin-top: 9vh;
+  margin-left: 2vh;
+  width: 10vh;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+}
+
+.home-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: red;
+  color: white;
+}
+
+.details {
+  background-color: black;
   color: white;
 }
