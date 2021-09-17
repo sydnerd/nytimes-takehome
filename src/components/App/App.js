@@ -3,7 +3,7 @@ import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
-import Nav from '../../components/Nav/Nav';
+// import Search from '../Search/Search';
 import Details from '../../components/Details/Details'
 
 const App = () => {
@@ -40,13 +40,13 @@ const App = () => {
 
   return (
     <main>
-      <header>
-        <Nav updateSection={updateSection}/>
-      </header>
+      {/* <header>
+        <Search updateSection={updateSection}/>
+      </header> */}
       <Switch>
         <Route exact path ='/'>
           {noArticles}
-          <ArticleList articles = {articles}/>
+          <ArticleList updateSection={updateSection}articles = {articles}/>
         </Route>
         <Route exact path ='/:id'
           render={({ match }) => {

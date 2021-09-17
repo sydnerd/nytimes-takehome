@@ -1,9 +1,9 @@
 import './ArticleList.css'
 import ArticleCard from '../ArticleCard/ArticleCard'
+import Search from '../Search/Search'
 
-const ArticleList = ({articles}) => {
+const ArticleList = ({articles, updateSection}) => {
   const articleTitles = articles.map(article => {
-    console.log('article in article list', article)
     return (
       <ArticleCard 
         key={article.title}
@@ -16,9 +16,15 @@ const ArticleList = ({articles}) => {
     )
   })
   return (
+    <main>
+      <nav>
+        <h1>News</h1>
+        <Search updateSection={updateSection}/>
+      </nav>
     <section className='article-list-section'>
       {articleTitles}
     </section>
+    </main>  
   )
 }
 
