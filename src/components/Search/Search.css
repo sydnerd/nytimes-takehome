@@ -1,0 +1,14 @@
+.drop-down {
+  width: 25vh;
+  margin-top: 9vh;
+  margin-right: 2vh;
+  color: black;
+}
+
+@media screen and (max-width: 620px) {
+ .drop-down {
+   width: 30vh;
+   margin-top: 0vh;
+   margin-bottom: 2vh;
+ }
+}

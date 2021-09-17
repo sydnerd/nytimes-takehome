@@ -3,7 +3,6 @@ import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
-import Nav from '../../components/Nav/Nav';
 import Details from '../../components/Details/Details'
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
             let id = i
             return { ...article, id: `${id}`}
           })
-          console.log('fetched articles', articlesWId)
           setArticles(articlesWId)
         }
       })
@@ -32,14 +30,14 @@ const App = () => {
     setSectionType(section)
   }
 
+  const noArticles = !articles.length && <h2>There are no articles in this section! :(</h2>
+
   return (
     <main>
-      <header>
-        <Nav updateSection={updateSection}/>
-      </header>
       <Switch>
         <Route exact path ='/'>
-          <ArticleList articles = {articles}/>
+          {noArticles}
+          <ArticleList updateSection={updateSection}articles = {articles}/>
         </Route>
         <Route exact path ='/:id'
           render={({ match }) => {

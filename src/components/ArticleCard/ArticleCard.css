@@ -1,7 +1,6 @@
 .article-card {
-  /* border: solid 1px black; */
   width: 65vh;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin:5vh;
