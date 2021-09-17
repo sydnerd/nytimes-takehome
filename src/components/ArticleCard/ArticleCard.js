@@ -15,7 +15,7 @@ const ArticleCard = ({title, image, section, id }) => {
         <Link
           to={`/${id}`}
         >
-          <button className='info-button'>Click for more info</button>
+          <button className='info-button'>More info</button>
         </Link>
       </div>
     </section>
