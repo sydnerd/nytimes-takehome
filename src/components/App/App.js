@@ -3,7 +3,6 @@ import { getArticles } from '../../utils/apiCalls'
 import React, {useEffect, useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ArticleList from '../ArticleList/ArticleList'
-// import Search from '../Search/Search';
 import Details from '../../components/Details/Details'
 
 const App = () => {
@@ -32,17 +31,9 @@ const App = () => {
   }
 
   const noArticles = !articles.length && <h2>There are no articles in this section! :(</h2>
-    //TO DO:
-    //Move search into the articleList component
-    //Make a nav inside of the articleList component with the title
-    //Inside of the details page, add the home button
-    //Add media queries to fix the mobile version to make the app responsive 
 
   return (
     <main>
-      {/* <header>
-        <Search updateSection={updateSection}/>
-      </header> */}
       <Switch>
         <Route exact path ='/'>
           {noArticles}
