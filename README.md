@@ -1,6 +1,5 @@
 ## Project Overview!
-
-[Uploading Screen Shot 2021-09-17 at 7.41.47 AM.png…]()
+<img width="1275" alt="Screen Shot 2021-09-17 at 7 41 47 AM" src="https://user-images.githubusercontent.com/78241098/133801960-811fa3d6-ea33-4f9c-963d-084f6a8cd157.png">
 
 This application is the result of a practice take home challenge for Turing Mod4.
 
